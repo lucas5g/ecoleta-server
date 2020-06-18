@@ -5,8 +5,8 @@ module.exports = {
   connection:{
     //filename:path.resolve(__dirname, 'src', 'database', 'database.mysql'),
     host: '127.0.0.1',
-    user: 'server',
-    password: 'server_user',
+    user: 'userdb',
+    password: 'userdb_server',
     database: 'ecoleta'
   },
   migrations:{
