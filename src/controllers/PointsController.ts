@@ -52,15 +52,16 @@ class PointsController {
   async create(request: Request, response: Response) {
 
     const { name, email, whatsapp, latitude, longitude, city, uf, items } = request.body
-
+    
     const trx = await knex.transaction()
-
+    
     const point = {
       image: 'https://images.unsplash.com/photo-1578240597669-05ffd2cf91be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=347&q=80-fake', name, email, whatsapp, latitude, longitude, city, uf
     }
+    
+    //return response.json(point)
 
     const insertedIds = await trx('points').insert(point)
-    /** */
     //const ids = [1]
     const point_id = insertedIds[0]
     const pointItems = items.map((item_id: number) => {
@@ -75,6 +76,7 @@ class PointsController {
     await trx.commit()
 
     return response.json({id: point_id, ...point})
+    /** */
   }
 
 
