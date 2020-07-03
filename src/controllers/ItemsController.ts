@@ -9,7 +9,7 @@ class ItemsController{
       return {
         id: item.id,
         title: item.title,
-        image_url: `http://192.168.0.28:8000/uploads/${item.image}`
+        image_url: `https://ecoleta-lucas.herokuapp.com/uploads/${item.image}`
       }
     })
   
