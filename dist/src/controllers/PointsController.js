@@ -106,10 +106,12 @@ var PointsController = /** @class */ (function () {
                 switch (_c.label) {
                     case 0:
                         id = request.params.id;
-                        return [4 /*yield*/, connection_1.default('points').where('id', id).first()];
+                        return [4 /*yield*/, connection_1.default('points').where('id', id).first()
+                            //console.log(point)
+                        ];
                     case 1:
                         point = _c.sent();
-                        console.log(point);
+                        //console.log(point)
                         if (!point)
                             return [2 /*return*/, response.status(400).json({ message: 'Point not found' })];
                         _a = [__assign({}, point)];
