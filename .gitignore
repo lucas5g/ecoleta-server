@@ -3,3 +3,4 @@ yarn.lock
 uploads/*
 src/database/connection.ts
 knexfile.ts
+.env

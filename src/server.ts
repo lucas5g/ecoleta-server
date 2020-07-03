@@ -11,4 +11,5 @@ app.use(routes)
 
 app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')))
 
+//console.log(process.env.DB_HOST)
 app.listen(process.env.PORT || 8000)
